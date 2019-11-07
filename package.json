@@ -1,0 +1,44 @@
+{
+  "name": "@bszhct/template-webpack",
+  "version": "0.0.2",
+  "description": "模板脚手架的 webpack 打包依赖",
+  "scripts": {
+    "build": "rm -rf lib && cp -R src lib"
+  },
+  "main": "index.js",
+  "license": "ISC",
+  "author": "bszhct",
+  "dependencies": {
+    "@bszhct/template-eslint": "0.0.1",
+    "autoprefixer": "9.7.1",
+    "awesome-typescript-loader": "5.2.1",
+    "clean-webpack-plugin": "3.0.0",
+    "css-loader": "3.2.0",
+    "file-loader": "4.2.0",
+    "less": "3.10.3",
+    "less-loader": "5.0.0",
+    "mini-css-extract-plugin": "0.8.0",
+    "optimize-css-assets-webpack-plugin": "5.0.3",
+    "postcss-loader": "3.0.0",
+    "postcss-safe-parser": "4.0.1",
+    "source-map-loader": "0.2.4",
+    "style-loader": "1.0.0",
+    "stylus": "0.54.7",
+    "stylus-loader": "3.0.2",
+    "uglifyjs-webpack-plugin": "2.2.0",
+    "url-loader": "2.2.0",
+    "webpack": "4.41.2",
+    "webpack-bundle-analyzer": "3.6.0",
+    "webpack-cli": "3.3.10",
+    "webpack-dev-server": "3.9.0",
+    "webpack-merge": "4.2.2"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "eslintIgnore": [
+    "lib",
+    "dist"
+  ]
+}
