@@ -1,1 +1,1 @@
-module.exports = 'src/index'
+module.exports = './src/index.tsx'

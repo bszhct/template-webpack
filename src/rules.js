@@ -8,6 +8,7 @@ const postcss = {
     plugins: [autoprefixer],
   },
 }
+const configFileName = isDev ? 'tsconfig.json' : 'tsconfig.prod.json'
 
 
 module.exports = {
@@ -15,6 +16,10 @@ module.exports = {
     {
       test: /\.tsx?$/,
       loader: 'awesome-typescript-loader',
+      options: {
+        transpileOnly: true,
+        configFileName,
+      },
     },
     {
       test: /\.js$/,

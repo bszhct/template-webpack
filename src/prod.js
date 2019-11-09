@@ -13,8 +13,8 @@ module.exports = merge(base, {
       generateStatsFile: true,
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[name].chunk.css',
+      filename: '[name].[hash].css',
+      chunkFilename: '[name].[contenthash].css',
     }),
   ],
 })

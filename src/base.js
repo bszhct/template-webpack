@@ -3,6 +3,7 @@ const output = require('./output')
 const optimization = require('./optimization')
 const rules = require('./rules')
 const resolve = require('./resolve')
+const plugins = require('./plugins')
 const externals = require('./externals')
 
 
@@ -13,5 +14,6 @@ module.exports = {
   optimization,
   module: rules,
   resolve,
+  plugins,
   externals,
 }

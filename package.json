@@ -1,6 +1,6 @@
 {
   "name": "@bszhct/template-webpack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "模板脚手架的 webpack 打包依赖",
   "scripts": {
     "build": "rm -rf lib && cp -R src lib"
@@ -15,6 +15,7 @@
     "clean-webpack-plugin": "3.0.0",
     "css-loader": "3.2.0",
     "file-loader": "4.2.0",
+    "html-webpack-plugin": "3.2.0",
     "less": "3.10.3",
     "less-loader": "5.0.0",
     "mini-css-extract-plugin": "0.8.0",
