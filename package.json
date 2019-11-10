@@ -1,6 +1,6 @@
 {
   "name": "@bszhct/template-webpack",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "模板脚手架的 webpack 打包依赖",
   "scripts": {
     "build": "rm -rf lib && cp -R src lib"
@@ -9,7 +9,7 @@
   "license": "ISC",
   "author": "bszhct",
   "dependencies": {
-    "@bszhct/template-eslint": "0.0.1",
+    "@bszhct/template-eslint": "0.0.2",
     "autoprefixer": "9.7.1",
     "awesome-typescript-loader": "5.2.1",
     "clean-webpack-plugin": "3.0.0",

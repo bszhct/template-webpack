@@ -7,3 +7,6 @@
 ## 0.0.3
 - 添加 html-webpack-plugin 插件
 - 添加 plugins，entry、output、rules 优化
+
+## 0.0.5
+- 升级 @bszhct/template-eslint 到 0.0.2
