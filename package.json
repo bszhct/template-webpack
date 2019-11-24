@@ -1,9 +1,12 @@
 {
   "name": "@bszhct/template-webpack",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "模板脚手架的 webpack 打包依赖",
   "scripts": {
     "build": "rm -rf lib && cp -R src lib"
+  },
+  "bin": {
+    "bs-scripts": "bin/bs-scripts"
   },
   "main": "index.js",
   "license": "ISC",
@@ -13,6 +16,7 @@
     "autoprefixer": "9.7.1",
     "awesome-typescript-loader": "5.2.1",
     "clean-webpack-plugin": "3.0.0",
+    "commander": "4.0.1",
     "css-loader": "3.2.0",
     "file-loader": "4.2.0",
     "html-webpack-plugin": "3.2.0",

@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+/* eslint-disable global-require */
+
+const program = require('commander')
+const webpack = require('webpack')
+const WebpackDevServer = require('webpack-dev-server')
+
+const pkg = require('../package.json')
+
+
+program
+  .version(`${pkg.name} ${pkg.version}`)
+  .usage('<command> [options]')
+
+program
+  .command('dev')
+  .description('启动开发环境')
+  .action(cmd => {
+    process.env.NODE_ENV = 'development'
+    
+    const config = webpack(require('../lib/dev'))
+    const app = new WebpackDevServer(config)
+    app.listen(config.options.devServer.port, config.options.devServer.host, err => {
+      if (err) {
+        console.log('服务启动失败')
+        process.exit()
+      }
+    })
+  })
+
+program
+  .command('build')
+  .description('启动打包服务')
+  .action(cmd => {
+    webpack(require('../lib/build'), (err, stats) => {
+      if (err || stats.hasErrors()) {
+        console.log('服务启动失败')
+        process.exit()
+      }
+      console.log(stats.toString({
+        chunks: true,
+        colors: true,
+      }))
+    })
+  })
+
+program.parse(process.argv)
+
+if (!process.argv.slice(2).length) {
+  program.outputHelp()
+}

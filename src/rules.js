@@ -32,7 +32,7 @@ module.exports = {
         isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
         'css-loader',
         postcss,
-        'less-loader?{"sourceMap":true}',
+        'less-loader?{"sourceMap":true, "javascriptEnabled": true}',
       ],
     },
     {
