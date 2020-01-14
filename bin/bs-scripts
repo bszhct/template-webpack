@@ -19,7 +19,7 @@ program
     process.env.NODE_ENV = 'development'
     
     const config = webpack(require('../lib/dev'))
-    const app = new WebpackDevServer(config)
+    const app = new WebpackDevServer(config, config.options.devServer)
     app.listen(config.options.devServer.port, config.options.devServer.host, err => {
       if (err) {
         console.log('服务启动失败')
